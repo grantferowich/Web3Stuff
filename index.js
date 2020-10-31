@@ -29,3 +29,5 @@ const abi = [{"constant":true,"inputs":[],"name":"mintingFinished","outputs":[{"
 const contract = new web3.eth.Contract(abi, OMGaddress)
 
 contract.methods.totalSupply().call((err, result) => { console.log("result, ",result) })
+
+contract.methods.name().call((error,result) => console.log("name ",result))
