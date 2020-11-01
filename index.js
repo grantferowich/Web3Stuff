@@ -9,7 +9,8 @@ const web3 = new Web3(rpcURL);
 // --------------------------------
 // Dummy Eth Wallet for testing
 // --------------------------------
-const address1 = "0xbC07B76e4C63E7B91c6E0395312D88D20449b106";
+const address1 = '0xd2D43Cf78E99D31Ee1d63fD785751CB97BF33691';
+const address2 = '0xDF9341F8822a25e9a236e36e4e23B52fc7a6e100';
 
 
 // --------------------------------
@@ -20,12 +21,13 @@ web3.eth.getBalance(address1, (err, wei) => {
     console.log("Balance from Addr 1:",balance+" ETH")
 });
 
-const address2 = '0xd2D43Cf78E99D31Ee1d63fD785751CB97BF33691';
 
 web3.eth.getBalance(address2, (err, wei) => {
     balance = web3.utils.fromWei(wei, 'ether')
     console.log("Balance from Addr 1:", balance+" ETH")
 });
+
+
 // --------------------------------
 // Instantiate SC as JS object
 // --------------------------------
