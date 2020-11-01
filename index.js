@@ -4,7 +4,7 @@
 const Web3 = require('web3');
 const rpcURL = "https://ropsten.infura.io/v3/288bc65f9d5f47ae8486cf912ebe19dc";
 const web3 = new Web3(rpcURL);
-
+require('dotenv').config();
 
 // --------------------------------
 // Dummy Eth Wallet for testing
@@ -38,3 +38,11 @@ web3.eth.getBalance(address2, (err, wei) => {
 // contract.methods.totalSupply().call((err, result) => { console.log("result, ",result) })
 
 // contract.methods.name().call((error,result) => console.log("name ",result))
+
+// console.log('No value for FOO yet:', process.env.FOO);
+
+// if (process.env.NODE_ENV !== 'production') {
+//     require('dotenv').config();
+//   }
+  
+  console.log('the value for PK1 is:', process.env.PRIVATE_KEY_1);
