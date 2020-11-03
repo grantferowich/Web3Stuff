@@ -24,7 +24,7 @@ web3.eth.getBalance(address1, (err, wei) => {
 
 web3.eth.getBalance(address2, (err, wei) => {
     balance = web3.utils.fromWei(wei, 'ether')
-    console.log("Balance from Addr 1:", balance+" ETH")
+    console.log("Balance from Addr 2:", balance+" ETH")
 });
 
 
@@ -45,4 +45,4 @@ web3.eth.getBalance(address2, (err, wei) => {
 //     require('dotenv').config();
 //   }
   
-  console.log('the value for PK1 is:', process.env.PRIVATE_KEY_1);
+//   console.log('the value for PK1 is:', process.env.PRIVATE_KEY_1);
