@@ -20,14 +20,20 @@ const pk2 = Buffer.from(process.env.PRIVATE_KEY_2, 'hex');
 web3.eth.getTransactionCount( testAccount1, (err, txCount) => {
 
     // create transaction object
+    // const txObject = {
+    //         nonce:      web3.utils.toHex(txCount),
+    //         to:         testAccount2,
+    //         value:      web3.utils.toHex(web3.utils.toWei( '0.1', 'ether' )),
+    //         gasLimit:   web3.utils.toHex(21000),
+    //         gasPrice:   web3.utils.toHex(web3.utils.toWei('25', 'gwei'))
+    // }
     const txObject = {
-            nonce:      web3.utils.toHex(txCount),
-            to:         testAccount2,
-            value:      web3.utils.toHex(web3.utils.toWei( '0.1', 'ether' )),
-            gasLimit:   web3.utils.toHex(21000),
-            gasPrice:   web3.utils.toHex(web3.utils.toWei('25', 'gwei'))
-    }
-    // console.log("txObject: ",txObject)
+        nonce:    web3.utils.toHex(txCount),
+        gasLimit: web3.utils.toHex(1000000), // Raise the gas limit to a much higher amount
+        gasPrice: web3.utils.toHex(web3.utils.toWei('15', 'gwei')),
+        data: data
+      }
+    console.log("txObject: ",txObject)
 
     // sign the transaction object
     const tx = new Tx(txObject, {'chain':'ropsten'})

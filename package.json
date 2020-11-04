@@ -1,0 +1,19 @@
+{
+  "name": "web3stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clariti23/Web3Stuff.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clariti23/Web3Stuff/issues"
+  },
+  "homepage": "https://github.com/Clariti23/Web3Stuff#readme"
+}
