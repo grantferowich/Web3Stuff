@@ -1,10 +1,20 @@
+// Make sure you have Node.js installed.
+// Run "node -v" in the terminal. You should see something like "v14.14.0".
+
+// If you need to install Node.js go here: https://nodejs.org/en/download/
+
+// Scroll down to Line 75 to change block number input parameters.
+// Then run "node get_Time_From_Block.js" in the terminal.
+
+
+// You will need an Infura API key. See Line 20.
+// I can share it if you need one but I saved it to the local machine environment to avoid sharing the key publicly.
+
 // -------------------------
 // Dependencies
 // -------------------------
 require('dotenv').config();
 const Web3 = require('web3')
-
-
 const InfuraURL = "https://mainnet.infura.io/v3/"+process.env.INFURA_API_KEY
 const web3 = new Web3(new Web3.providers.HttpProvider(InfuraURL));
 
@@ -46,6 +56,7 @@ const GetTimes = async (blockNum1, blockNum2) => {
             console.log(statement,s);
         })
     } else {
+        // get the date for each block number spanning the range to construct the object
         for (let i = blockNum1; i <= blockNum2; i++){
             await web3.eth.getBlock(i, (e, block) => {
                 const dateTimeStamp = block.timestamp; 
@@ -59,6 +70,7 @@ const GetTimes = async (blockNum1, blockNum2) => {
     }
 }
 
-// invoke the function where block numbers are inputted.....
+// invoke the function with block numbers are inputted.....
+GetTimes(11191313);
 GetTimes(11191313,11191319);
 
