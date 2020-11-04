@@ -8,7 +8,9 @@
 
 
 // You will need an Infura API key. See Line 20.
-// I can share it if you need one but I saved it to the local machine environment to avoid sharing the key publicly.
+// I can share it if you need one 
+// Saved the API key to the local machine environment to avoid sharing the key publicly when checking into version control.
+
 
 // -------------------------
 // Dependencies
